@@ -1,7 +1,7 @@
 import CommentBox from "./CommentBox"
 import './CommentThread.css'
 
-function CommentThread({comment}) {
+function CommentThread({comment, currentUser}) {
 
 
     
@@ -14,7 +14,8 @@ function CommentThread({comment}) {
             username={comment.user.username}
             date={comment.createdAt}
             content={comment.content}
-            scoreInit={comment.score} />
+            scoreInit={comment.score} 
+            currentUser={currentUser} />
 
             {comment.replies.length > 0 && (
                 <div className="replies">
@@ -25,7 +26,8 @@ function CommentThread({comment}) {
                          date={reply.createdAt}
                          content={reply.content}
                          scoreInit={reply.score} 
-                         repliedTo={reply.replyingTo} />)
+                         repliedTo={reply.replyingTo} 
+                         currentUser={currentUser} />)
 
                          
                     })}

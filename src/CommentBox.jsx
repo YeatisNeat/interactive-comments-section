@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './CommentBox.css'
 
-function CommentBox({userImage, username, date, content, scoreInit, repliedTo}) {
+function CommentBox({userImage, username, date, content, scoreInit, repliedTo, currentUser}) {
 
     const [score, setScore] = useState(scoreInit)
 
@@ -33,10 +33,19 @@ function CommentBox({userImage, username, date, content, scoreInit, repliedTo}) 
                     <button onClick={MinusClick}><img src="./images/icon-minus.svg"></img></button>
                 </div>
 
+                {username == currentUser ? 
+                <div className="edit-delete-container">
+                    <button><img src="./images/icon-delete.svg"></img>
+                    <p className="delete-text">Delete</p></button>
+
+                    <button><img src="./images/icon-edit.svg"></img>
+                    <p className="edit-text">Edit</p></button>
+                </div> 
+                :
                 <div className="reply-container">
                     <button><img src="./images/icon-reply.svg"></img></button>
                     <p className="reply-text">Reply</p>
-                </div>
+                </div> }
             </div>
             
         </div>

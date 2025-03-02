@@ -48,6 +48,35 @@
     align-items: center;
 }
 
+.edit-delete-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 1rem;
+}
+
+.edit-delete-container button{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.edit-text {
+    font-family: 'Rubik';
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--Moderate-blue);
+}
+
+.delete-text {
+    font-family: 'Rubik';
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--Soft-red);
+}
+
 .score-container {
     display: flex;
     align-items: center;

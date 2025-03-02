@@ -10,7 +10,7 @@ function App() {
     <>
       {data.comments.map((comment, index) => {
         return (
-          <CommentThread comment={comment} key={index}/>
+          <CommentThread comment={comment} currentUser={data.currentUser.username} key={index}/>
         )
          
       })}
