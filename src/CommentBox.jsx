@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './CommentBox.css'
 
-function CommentBox({userImage, username, date, content, scoreInit, replies}) {
+function CommentBox({userImage, username, date, content, scoreInit, repliedTo}) {
 
     const [score, setScore] = useState(scoreInit)
+
+    
 
     function PlusClick() {
         setScore(score + 1)
@@ -22,7 +24,7 @@ function CommentBox({userImage, username, date, content, scoreInit, replies}) {
                 <p className="created-at">{date}</p>
             </div>
 
-            <p className="content">{content}</p>
+            <p className="content">{repliedTo!=undefined && (<span className="replying-to">@{repliedTo}</span>)} {content}</p>
 
             <div className="buttons-container">
                 <div className="score-container">

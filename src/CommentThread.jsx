@@ -24,7 +24,8 @@ function CommentThread({comment}) {
                          username={reply.user.username}
                          date={reply.createdAt}
                          content={reply.content}
-                         scoreInit={reply.score} />)
+                         scoreInit={reply.score} 
+                         repliedTo={reply.replyingTo} />)
 
                          
                     })}

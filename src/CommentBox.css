@@ -37,6 +37,11 @@
     margin-bottom: 1rem;
 }
 
+.replying-to {
+    color: var(--Moderate-blue);
+    font-weight: 500;
+}
+
 .buttons-container {
     display: flex;
     
