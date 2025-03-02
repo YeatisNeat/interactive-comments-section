@@ -39,7 +39,7 @@
 
 .buttons-container {
     display: flex;
-    gap: 9.063rem;
+    
     align-items: center;
 }
 
@@ -73,6 +73,7 @@
     gap: 0.5rem;
     height: fit-content;
     align-items: center;
+    margin-left: auto;
 }
 
 .reply-container img {
