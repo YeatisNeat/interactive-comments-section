@@ -16,6 +16,7 @@
     background: white;
     border-radius: 8px;
     margin: 0 1rem;
+    max-width: 400px;
 }
 
 .delete-title {
@@ -59,4 +60,5 @@
     border-radius: 8px;
     min-width: 138px;
     min-height: 48px;
+    margin-left: auto;
 }

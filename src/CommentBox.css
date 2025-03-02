@@ -121,3 +121,10 @@
     color: var(--Moderate-blue);
 }
 
+@media only screen and (min-width: 768px) {
+    .replies {
+        margin-left: 43px;
+        border-width: 2px;
+    }
+}
+

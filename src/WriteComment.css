@@ -1,0 +1,49 @@
+.write-comment {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.write-input {
+    font-family: 'Rubik';
+    line-height: 1.5rem;
+    color: var(--Grayish-blue);
+    width: 100%;
+    min-height: 96px;
+    padding-left: 1.5rem;
+    padding-top: 0.75rem;
+    border: none;
+    border: 1px solid var(--Light-Gray);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.write-input::placeholder {
+    color: var(--Grayish-blue);
+}
+
+.write-comment textarea {
+    resize: none;
+}
+
+.write-bottom-container {
+    display: flex;
+    align-items: center;
+}
+
+.write-bottom-container img {
+    width: 32px;
+    height: 32px;
+}
+
+.send-button {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: white;
+    margin-left: auto;
+    padding: 0.75rem 1.875rem;
+    background-color: var(--Moderate-blue);
+    border-radius: 8px;
+}
+
