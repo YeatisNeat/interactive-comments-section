@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import DeleteModal from './DeleteModal'
 import './CommentBox.css'
 
 function CommentBox({userImage, username, date, content, scoreInit, repliedTo, currentUser}) {
 
     const [score, setScore] = useState(scoreInit)
-
+    const[showModal, setShowModal] = useState(false)
     
 
     function PlusClick() {
@@ -13,6 +14,10 @@ function CommentBox({userImage, username, date, content, scoreInit, repliedTo, c
 
     function MinusClick() {
         setScore(score - 1)
+    }
+
+    function ClickDelete() {
+        setShowModal(true)
     }
 
     return (
@@ -35,7 +40,7 @@ function CommentBox({userImage, username, date, content, scoreInit, repliedTo, c
 
                 {username == currentUser ? 
                 <div className="edit-delete-container">
-                    <button><img src="./images/icon-delete.svg"></img>
+                    <button onClick={ClickDelete}><img src="./images/icon-delete.svg"></img>
                     <p className="delete-text">Delete</p></button>
 
                     <button><img src="./images/icon-edit.svg"></img>
@@ -46,6 +51,11 @@ function CommentBox({userImage, username, date, content, scoreInit, repliedTo, c
                     <button><img src="./images/icon-reply.svg"></img></button>
                     <p className="reply-text">Reply</p>
                 </div> }
+
+
+                <DeleteModal 
+                    isOpen={showModal}
+                    onClose={() => setShowModal(false)}/>
             </div>
             
         </div>
